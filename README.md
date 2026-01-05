@@ -11,6 +11,10 @@ Application WinUI 3 permettant la gestion complète d’activités, de séances,
 - [Fonctionnalités](#fonctionnalités)
 - [Architecture du projet](#architecture-du-projet)
 - [Structure de la base de données](#Structure-de-la-base-de-données)
+- [Triggers, vues et procédures](#Triggers,-vues-et-procédures)
+- [Installation et configuration](#Installation-et-configuration)
+- [Technologies-utilisées](#Technologies-utilisées)
+- [Auteurs](#Auteurs)
   
 # Description
 
