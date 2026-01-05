@@ -9,6 +9,7 @@ Application WinUI 3 permettant la gestion complète d’activités, de séances,
 --------
 - [Description](#description)  
 - [Fonctionnalités](#fonctionnalités)
+- [Architecture du projet](#ArchitectureDuProjet)
   
 # Description
 
@@ -154,58 +155,107 @@ Relations
 
 - Triggers
 
-    génération automatique du matricule adhérent
-    
-    vérification de l’âge minimum (18 ans)
-    
-    contrôle du nombre de places disponibles
-    
-    mise à jour automatique du nombre de places
+      génération automatique du matricule adhérent
+      
+      vérification de l’âge minimum (18 ans)
+      
+      contrôle du nombre de places disponibles
+      
+      mise à jour automatique du nombre de places
 
 - Vues
 
-    ParticipantPlusActif
-    
-    PrixMoyenParParticipant
-    
-    NotesDesActivités
-    
-    MoyenneDesNotes
-    
-    nbParticipant
-    
-    nbParticipantMoyParMois
+      ParticipantPlusActif
+      
+      PrixMoyenParParticipant
+      
+      NotesDesActivités
+      
+      MoyenneDesNotes
+      
+      nbParticipant
+      
+      nbParticipantMoyParMois
 
 - Procédures stockées
 
-    AffActivite
-    
-    AffSeance
-    
-    AjoutActivite, ModifActivite, SuppActivite
-    
-    AjoutSeance, ModifSeance, SuppSeance
-    
-    AjoutAdherent, ModifAdherent, SuppAdherent
-    
-    SeanceAdherent
-    
-    NoterSeance
-    
-    ParticipantPopulaire
-    
-    ActiviteMieuxNote
-    
-    SeancePopulaire
+      AffActivite
+      
+      AffSeance
+      
+      AjoutActivite, ModifActivite, SuppActivite
+      
+      AjoutSeance, ModifSeance, SuppSeance
+      
+      AjoutAdherent, ModifAdherent, SuppAdherent
+      
+      SeanceAdherent
+      
+      NoterSeance
+      
+      ParticipantPopulaire
+      
+      ActiviteMieuxNote
+      
+      SeancePopulaire
     
 - Fonctions SQL
 
-    f_verifier_adherent
+      f_verifier_adherent
+      
+      f_verifier_admin
+      
+      f_verifier_admin_MDP
+      
+      f_verifier_seance_adherent
+      
+      f_get_Nom
+
+# Installation et configuration
+
+- Prérequis
+  
+      Visual Studio 2022
+      
+      Windows App SDK
+      
+      MySQL Server
+      
+      MySQL Workbench
+
+- Cloner le projet
+
+      git clone https://github.com/ton-projet/ProjetGraphiqueSession.git
+
+- Configurer la base de données
+  
+- Modifier la chaîne de connexion
+
+Dans Singleton.cs :
+
+    MySqlConnection con = new MySqlConnection(
+        "Server=...;Database=...;Uid=...;Pwd=...;"
+    );
+
+# Technologies utilisées
+
+    WinUI 3
     
-    f_verifier_admin
+    C# / .NET 6
     
-    f_verifier_admin_MDP
+    MySQL
     
-    f_verifier_seance_adherent
+    XAML
     
-    f_get_Nom
+    MVVM simplifié
+
+    Procedures stockées SQL
+  
+# Auteurs
+
+Projet réalisé dans le cadre du cours 420-335-RI.
+Équipe 2 — Cégep de Trois‑Rivières.
+
+- Brayan Dyvan Lando Longmene
+
+- Charles Ouellet
