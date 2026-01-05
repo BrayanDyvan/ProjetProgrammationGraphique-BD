@@ -9,7 +9,7 @@ Application WinUI 3 permettant la gestion complète d’activités, de séances,
 --------
 - [Description](#description)  
 - [Fonctionnalités](#fonctionnalités)
-- [Architecture du projet](#ArchitectureDuProjet)
+- [Architecture du projet](#Architectureduprojet)
   
 # Description
 
